@@ -13,3 +13,4 @@ curtidas.forEach((element, oi) => {
         
     }) 
 });
+
