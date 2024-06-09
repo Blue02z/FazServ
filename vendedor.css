@@ -19,7 +19,12 @@ header{
 body{
     width: 100%;
     display: flex;
+}
 
+body.active{
+    overflow: hidden;
+    width: 100%;
+    display: flex;
 }
 
 nav{
