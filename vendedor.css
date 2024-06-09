@@ -13,6 +13,14 @@ header{
     height: 70px;
 }
 
+
+
+body{
+    width: 100%;
+    display: flex;
+
+}
+
 nav{
     display: flex;
     align-items: center;
@@ -629,5 +637,55 @@ main{
         text-align: center;
     }
     
+    .avaliacoes{
+        width: 90%;
+    }
+
+    .foto-usuario img{
+        width: 35px;
+        height: 35px;
+    }
+
+    .conteudo-avaliacao h3{
+        font-size: 16px;
+    }
+
+    .avaliacao p{
+        font-size: 14px;
+    }
+
+    .produto{
+        width: 90%;
+    }
+
+    .container-produto{
+        display: flex;
+        width: 100%;
+        background-color: hsla(0, 0%, 79%, 0.200);
+        padding: 20px;
+        border-radius: 6px;
+        margin-top: 50px;
+
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .sobre-mim p{
+        font-size: 15px;
+    }
+
+   #titulo {
+    font-size: 23px;
+   }
+
+    .infos h3{
+        font-size: 20px;
+    }
 
 }
