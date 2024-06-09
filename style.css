@@ -610,6 +610,14 @@ form{
 
     }
 
+
+    .menu-icon:hover{
+        background-color: rgba(128, 128, 128, 0.205);
+        border-radius: 12px;
+        outline: 4px solid rgba(128, 128, 128, 0.205);
+        cursor: pointer;
+    }
+
     nav{
         display: flex;
         align-items: center;
