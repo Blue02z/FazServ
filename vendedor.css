@@ -11,6 +11,7 @@
 header{
     display: flex;
     height: 70px;
+    z-index: 1;
 }
 
 
@@ -214,7 +215,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 0;
+
 }
 
 .produto{
@@ -518,13 +519,10 @@ main{
         background-color: white;
         position: fixed;
         height: 70px;
-        z-index: 2;
+
     }
 
-    .card{
-        z-index: 1;
-    }
-
+    
     .servicos, .chat, .notificacoes, .btn-entrar, .cadastrar, .postar, .barra-de-pesquisa{
         display: none;
     }
@@ -534,6 +532,13 @@ main{
         display: flex;
         float: left;
         margin-left: 15px;
+    }
+
+    .menu-icon:hover{
+        background-color: rgba(128, 128, 128, 0.205);
+        border-radius: 12px;
+        outline: 4px solid rgba(128, 128, 128, 0.205);
+        cursor: pointer;
     }
 
     .menu-aberto.active{
