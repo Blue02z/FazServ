@@ -1,6 +1,7 @@
 let like = document.querySelectorAll(".like");
 let curtidas = document.querySelectorAll(".curtidas");
-
+let btnMenu = document.querySelector(".menu-icon")
+let menuAberto = document.querySelector(".menu-aberto")
 
 curtidas.forEach((element, oi) => {
     like[oi].addEventListener("click", () =>{
@@ -14,3 +15,7 @@ curtidas.forEach((element, oi) => {
     }) 
 });
 
+btnMenu.addEventListener("click", function(){
+    menuAberto.classList.toggle("active")
+    body.classList.toggle("active")
+})
