@@ -600,6 +600,36 @@ form{
 
 }
 
+.fodase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noti-container{
+    display: none;
+}
+
+.noti-container.active{
+    width: 200px;
+    position: absolute;
+    margin-top: 60px;
+    height: 180px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: #CFCFCF 2px solid;
+    border-radius: 0px 0px 6px 6px ;
+    z-index: 4;
+}
+
+.noti-container p{
+    font-size: 15px;
+    color: #838383;
+    font-family: Poppins;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width:500px) {

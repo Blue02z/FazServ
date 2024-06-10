@@ -8,7 +8,8 @@ let body = document.body
 let btnMenu = document.querySelector(".menu-icon")
 let menuAberto = document.querySelector(".menu-aberto")
 let btnEntrar = document.getElementById("btnEntrar")
-
+let notificacoes = document.querySelector(".noti-container")
+let fodase = document.querySelector(".fodase")
 btnMais.addEventListener("click", function(){
     categoria1.classList.add("off")
     categoria2.classList.add("active")
@@ -34,8 +35,10 @@ btnMenu.addEventListener("click", function(){
     body.classList.toggle("active")
 })
 
-btnEntrar.addEventListener("click", function(){
-    loginCamp.classList.add("active")
-    body.classList.add("active")
-    menuAberto.classList.remove("active")
+
+
+
+
+fodase.addEventListener("click", function(){
+    notificacoes.classList.toggle("active")
 })
