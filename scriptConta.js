@@ -43,15 +43,7 @@ visibilidade.addEventListener("click", function(){
 
 })
 
-visibilidade2.addEventListener("click", function(){
-    if(senhaConfirmar.type === "password"){
-        senhaConfirmar.setAttribute("type", "text")
-    }else{
-        senhaConfirmar.setAttribute("type", "password")
-    }
-    
 
-})
 
 console.log(inputs[1])
 let lista = ["1", "a", "9", "o", "4", "f"]
