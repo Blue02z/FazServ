@@ -17,6 +17,7 @@ let sla = document.querySelector(".user-chat-open")
 let maximizar = document.querySelector(".maximizar")
 let btnChat = document.querySelector(".btn-chat")
 let visibilidade = document.getElementById("visibilidade")
+
 curtidas.forEach((element, oi) => {
     like[oi].addEventListener("click", () =>{
 
@@ -32,6 +33,8 @@ curtidas.forEach((element, oi) => {
 btnMenu.addEventListener("click", function(){
     menuAberto.classList.toggle("active")
     body.classList.toggle("active")
+    campoChat.classList.remove("active")
+
 })
 
 cadastrarBtn.addEventListener("click", function(){
@@ -42,7 +45,6 @@ cadastrarBtn.addEventListener("click", function(){
 btnEntrar.addEventListener("click", function(){
     loginCamp.classList.add("active")
     body.classList.add("active")
-    inn
     menuAberto.classList.remove("active")
 })
 
@@ -107,7 +109,12 @@ maximizar.addEventListener("click", function(){
 })
 
 btnChat.addEventListener("click", function(){
-    campoChat.classList.add("active")
+    if(menuAberto.classList.contains("active")){
+        campoChat.classList.remove("active")
+    }else{
+        campoChat.classList.add("active")
+    }
+    
 } )
 
 
