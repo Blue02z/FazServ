@@ -500,7 +500,7 @@ main{
 .login-camp.active{
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -847,6 +847,147 @@ form{
      width: 150px;
  }
 
+ .fodase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noti-container{
+    display: none;
+}
+
+.noti-container.active{
+    width: 200px;
+    position: absolute;
+    margin-top: 60px;
+    height: 180px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: #CFCFCF 2px solid;
+    border-radius: 0px 0px 6px 6px ;
+    z-index: 4;
+}
+
+.noti-container p{
+    font-size: 15px;
+    color: #838383;
+    font-family: Poppins;
+}
+
+
+#msgErro{
+    color: red;
+    font-family: inter;
+    font-weight: 600;
+}
+
+.menuEntrada{
+    display: flex;
+    gap: 10px;
+}
+
+.menuEntrada.desactive{
+    display: none;
+    
+}
+
+
+
+
+.user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+   
+}
+
+.user:hover{
+    
+    background-color: rgba(128, 128, 128, 0.205);
+    border-radius: 12px;
+    cursor: pointer;
+   
+}
+
+.cunamata{
+    display: none;
+}
+
+.cunamata.active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.user-container{
+    display: none;
+}
+
+#btn-enviar{
+    background-color: #6DF28A;
+    border: none;
+    width: 150px;
+    height: 45px;
+    border-radius: 6px;
+    color: white;
+    font-family: poppins;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-container.active{
+    position: absolute;
+    margin-top: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    text-align: center;
+}
+
+.user-container ul{
+    width: 100%;
+    height: 100%;
+    outline: #CFCFCF 2px solid;
+    border-radius: 0px 0px 6px 6px ;
+    padding-right: 8px;
+}
+
+.user-container li{
+    font-size: 15px;
+    color: #838383;
+    font-family: Poppins;
+    width: 100%;
+    padding: 5px 5px 5px 5px;
+}
+
+.user-container li:hover{
+    background-color: #38c556;
+    color: white;
+    cursor: pointer;
+}
+
+.user-container li:nth-child(1){
+    border-bottom: 2px solid #AEAEAE;
+}
+
+#btnCadastrar.desactive{
+    display: none;
+}
+
+#btnEntrar.desactive{
+    display: none;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width:500px) {
@@ -861,7 +1002,7 @@ form{
         display: flex;
         align-items: center;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         width: 100%;
         border-bottom: 2px solid #CFCFCF;
         background-color: white;
@@ -893,7 +1034,7 @@ form{
         display: flex;
         background-color: white;
         border-right: 2px solid #AEAEAE;
-        height: 260px;
+
         width: 100%;
         position: fixed;
         border-top: solid 2px #AEAEAE;

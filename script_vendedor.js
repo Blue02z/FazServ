@@ -17,16 +17,25 @@ let sla = document.querySelector(".user-chat-open")
 let maximizar = document.querySelector(".maximizar")
 let btnChat = document.querySelector(".btn-chat")
 let visibilidade = document.getElementById("visibilidade")
+let notificacoes = document.querySelector(".noti-container")
+let fodase = document.querySelector(".fodase")
+let email = document.getElementById("email")
+let senha = document.getElementById("senha")
+let btnEnviar = document.getElementById("btn-enviar")
+let form = document.form
+let erro = document.getElementById("erro")
+let menuEntrada = document.querySelector(".menuEntrada")
+let userIcon = document.querySelector(".cunamata")
+let userContainer = document.querySelector(".user-container")
+let btnCadastrar = document.getElementById("btnCadastrar")
+
+
+
+
 
 curtidas.forEach((element, oi) => {
     like[oi].addEventListener("click", () =>{
-
         like[oi].classList.toggle("ativado")
-
-
-        
-
-        
     }) 
 });
 
@@ -48,7 +57,18 @@ btnEntrar.addEventListener("click", function(){
     menuAberto.classList.remove("active")
 })
 
+visibilidade.addEventListener("click", function(){
+    if(senha.type === "password"){
+        senha.setAttribute("type", "text")
+        visibilidade.innerHTML = "visibility_off "
 
+    }else{
+        senha.setAttribute("type", "password")
+        visibilidade.innerHTML = "visibility"
+    }
+    
+
+})
 
 
 function AtualizarHora(){
@@ -129,4 +149,67 @@ visibilidade.addEventListener("click", function(){
     }
     
 
+})
+
+fodase.addEventListener("click", function(){
+
+
+    if(userContainer.classList.contains("active")){
+        userContainer.classList.remove("active")
+    }else{
+        notificacoes.classList.toggle("active")
+    }
+})
+
+
+
+function atualizarErro(){
+    let oi = erro.innerHTML = ""
+    return oi;
+    
+}
+atualizarErro()
+setInterval(atualizarErro, 3500);
+
+btnEnviar.addEventListener("click", function(){
+    if(senha.value == "adm123" && email.value == "admin123@gmail.com"){
+        menuEntrada.classList.add("desactive")
+        loginCamp.classList.remove("active")
+        userIcon.classList.add("active")
+        body.classList.remove("active")
+        btnCadastrar.classList.add("desactive")
+
+        btnEntrar.classList.add("desactive")
+    }else{
+        erro.innerHTML = `<p id="msgErro">Insira um E-mail ou senha válidos</p>`
+        senha.value = ""
+        email.value = ""
+    }
+    
+})
+
+email.addEventListener("keydown", function(){
+    if(event.key === "Enter"){
+        console.log("oii")
+        btnEnviar.click()
+    }
+})
+
+senha.addEventListener("keydown", function(){
+    if(event.key === "Enter"){
+        console.log("oii")
+        btnEnviar.click()
+    }
+})
+
+
+
+
+userIcon.addEventListener("click", function(){
+    if(notificacoes.classList.contains("active")){
+        notificacoes.classList.remove("active")
+    }else{
+        userContainer.classList.toggle("active")
+    }
+    
 })
